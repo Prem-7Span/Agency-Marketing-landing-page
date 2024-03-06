@@ -20,27 +20,25 @@
   height: 100vh;
   background-color: #ccc;
 }
-#main {
+.bordered {
   border-top-left-radius: 100px;
   border-top-right-radius: 100px;
 }
 
 .mobileBorder {
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
+  border-top: 50px;
+  border-bottom: 50px;
 }
 
 .client {
   position: relative;
 }
-/* .client::before {
+
+.testimonials {
+  @apply relative z-10;
+}
+
+.testimonials:before {
   content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100px;
-  width: 100%;
-  left: 0;
-  bottom: auto;
-  background-color: blue;
-} */
+  @apply absolute inset-x-0 bottom-0 top-auto w-full h-3/5 rounded-t-3xl bg-gradient-to-r from-bluePrimary to-PurplePrimary;
+}
